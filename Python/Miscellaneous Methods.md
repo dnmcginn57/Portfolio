@@ -51,3 +51,70 @@ def dirReduc(list):
 
     return L
 ```
+
+# 2
+```python
+def dupLetters(s):
+    """
+    @Method: dupLetters
+    @Description:
+      Method accepts a string of letters
+      This method is not case sensitive
+    @Returns: the number of letters which are repeated
+      NOT THE NUMBER OF TIMES THEY ARE REPEATED
+    """
+
+    s = s.lower()
+    repeats = 0
+
+
+    for i in s:
+        if s.count(i) > 1:
+            repeats += 1
+            s = s.replace(i, "")
+
+    return repeats
+```
+
+# 3
+```python
+def dupLetters(s):
+    """
+    @Method: dupLetters
+    @Description:
+      Method accepts a string of letters
+      This method is not case sensitive
+    @Returns: the number of letters which are repeated
+      NOT THE NUMBER OF TIMES THEY ARE REPEATED
+    """
+
+    s = s.lower()
+    repeats = 0
+
+
+    for i in s:
+        if s.count(i) > 1:
+            repeats += 1
+            s = s.replace(i, "")
+
+    return repeats
+```
+
+# 4
+```python
+def consecutive(L):
+    """
+    @Method: consecutive
+    @Description:
+        Locates the first value in the array which is not consecutive
+    @Returns: the first inconsecutive value or none if there isn't one
+    """
+
+    for i in range(len(L) - 1):
+        #the check is not preformed for the first value
+        if i != 0:
+            if L[i] != L[i - 1] and L[i] != L[i-1] + 1:
+                return L[i]
+
+    return None
+```
